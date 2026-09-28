@@ -12,6 +12,7 @@ import androidx.navigation.navArgument
 import github.com.biloschycki.clima_app.ui.details.DetailsScreen
 import github.com.biloschycki.clima_app.ui.favorites.FavoritesScreen
 import github.com.biloschycki.clima_app.ui.search.SearchScreen
+import github.com.biloschycki.clima_app.ui.settings.SettingsScreen
 
 @Composable
 fun ClimaNavHost(innerPadding: PaddingValues) {
@@ -34,10 +35,12 @@ fun ClimaNavHost(innerPadding: PaddingValues) {
                         )
                     )
                 },
-                onNavigateToFavorites = { navController.navigate(Screen.Favorites.route) }
+                onNavigateToFavorites = { navController.navigate(Screen.Favorites.route) },
+                onNavigateToSettings = { navController.navigate(Screen.Settings.route) }
             )
         }
         composable(Screen.Favorites.route) { FavoritesScreen() }
+        composable(Screen.Settings.route) { SettingsScreen() }
         composable(
             route = Screen.Details.route,
             arguments = listOf(
