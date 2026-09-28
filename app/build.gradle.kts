@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.climaapp"
+    namespace = "github.com.biloschycki.clima_app"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.climaapp"
+        applicationId = "github.com.biloschycki.clima_app"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -45,9 +45,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
