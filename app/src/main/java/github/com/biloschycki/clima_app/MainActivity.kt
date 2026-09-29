@@ -7,9 +7,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Scaffold
-import androidx.compose.ui.Modifier
 import github.com.biloschycki.clima_app.data.settings.SettingsRepository
 import github.com.biloschycki.clima_app.ui.navigation.ClimaNavHost
 import github.com.biloschycki.clima_app.ui.theme.ClimaAppTheme
@@ -40,9 +37,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             ClimaAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ClimaNavHost(innerPadding = innerPadding)
-                }
+                ClimaNavHost()
             }
         }
     }
